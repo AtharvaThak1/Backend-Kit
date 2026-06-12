@@ -1,0 +1,29 @@
+{
+  "name": "@avtdev/backend-kit",
+  "version": "1.0.0",
+  "description": "Production-ready utilities for Express.js applications",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "peerDependencies": {
+    "express": "^5.0.0 || ^4.0.0"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "backend",
+    "middleware",
+    "jwt",
+    "api"
+  ],
+  "author": "Atharva",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.11.0"
+  }
+}
