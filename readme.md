@@ -4,16 +4,24 @@ Production-ready utilities for Express.js applications.
 
 Backend Kit helps you bootstrap Express projects faster with built-in middleware, response helpers, async error handling, JWT authentication, environment validation, and more.
 
+## 📚 Documentation
+
+Full documentation is available at:
+
+**https://backend-kit-doc-website-git-main-atharvas-projects-79e62a8e.vercel.app/**
+
+---
+
 ## Features
 
-- 🚀 Easy Express initialization
-- 🔥 Async route handler
-- 📦 Standardized API responses
-- 🛡 Global error handling
-- 🔑 JWT Authentication middleware
-- 🌍 Environment variable validation
-- 🎫 JWT Token generation helper
-- ⚡ ES Module support
+* 🚀 Easy Express initialization
+* 🔥 Async route handler
+* 📦 Standardized API responses
+* 🛡 Global error handling
+* 🔑 JWT Authentication middleware
+* 🌍 Environment variable validation
+* 🎫 JWT Token generation helper
+* ⚡ ES Module support
 
 ---
 
@@ -52,11 +60,11 @@ app.listen(3000);
 
 Automatically configures:
 
-- Express JSON parser
-- CORS
-- Helmet
-- Morgan logger
-- Response helpers
+* Express JSON parser
+* CORS
+* Helmet
+* Morgan logger
+* Response helpers
 
 ```js
 import { init } from "@avtdev/backend-kit";
@@ -127,7 +135,7 @@ res.serverError();
 Avoid repetitive try/catch blocks.
 
 ```js
-import { asyncHandler } from "backend-kit";
+import { asyncHandler } from "@avtdev/backend-kit";
 
 router.get(
   "/users",
@@ -144,7 +152,7 @@ router.get(
 ## Global Error Handler
 
 ```js
-import { errorHandler } from "backend-kit";
+import { errorHandler } from "@avtdev/backend-kit";
 
 app.use(errorHandler);
 ```
@@ -156,7 +164,7 @@ app.use(errorHandler);
 Create custom errors with status codes.
 
 ```js
-import { AppError } from "backend-kit";
+import { AppError } from "@avtdev/backend-kit";
 
 throw new AppError("User not found", 404);
 ```
@@ -168,7 +176,7 @@ throw new AppError("User not found", 404);
 Protect routes using JWT tokens.
 
 ```js
-import { auth } from "backend-kit";
+import { auth } from "@avtdev/backend-kit";
 
 router.get("/profile", auth(), (req, res) => {
   res.success(req.user);
@@ -186,7 +194,7 @@ Authorization: Bearer YOUR_TOKEN
 ## Generate Token
 
 ```js
-import { generateToken } from "backend-kit";
+import { generateToken } from "@avtdev/backend-kit";
 
 const token = generateToken(
   {
@@ -207,7 +215,7 @@ const token = generateToken(
 Validate required environment variables before starting your application.
 
 ```js
-import { env } from "backend-kit";
+import { env } from "@avtdev/backend-kit";
 
 env(["PORT", "JWT_SECRET", "MONGO_URI"]);
 ```
@@ -218,7 +226,12 @@ env(["PORT", "JWT_SECRET", "MONGO_URI"]);
 
 ```js
 import express from "express";
-import { init, auth, asyncHandler, errorHandler } from "@avtdev/backend-kit";
+import {
+  init,
+  auth,
+  asyncHandler,
+  errorHandler,
+} from "@avtdev/backend-kit";
 
 const app = express();
 
@@ -239,19 +252,27 @@ app.listen(3000);
 
 ---
 
+## Documentation
+
+For complete guides, API references, examples, and updates:
+
+👉 https://backend-kit-doc-website-git-main-atharvas-projects-79e62a8e.vercel.app/
+
+---
+
 ## Roadmap
 
 Upcoming features:
 
-- Role-based access control
-- Request validation
-- Rate limiting
-- File uploads
-- Pagination helpers
-- Swagger integration
-- Redis caching
-- Socket.IO utilities
-- CLI project generator
+* Role-based access control
+* Request validation
+* Rate limiting
+* File uploads
+* Pagination helpers
+* Swagger integration
+* Redis caching
+* Socket.IO utilities
+* CLI project generator
 
 ---
 
